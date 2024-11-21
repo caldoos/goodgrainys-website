@@ -13,18 +13,16 @@ interface CarouselProps {
     indicator?: 'line' | 'thumbnail';
     aspectRatio?: string;
     sizes?: string;
-    revealedByDefault?: boolean;
 }
 
-const Carousel: React.FC<CarouselProps> = ({
+export const Carousel: React.FC<CarouselProps> = ({
     images = [],
     indicator = 'line',
     aspectRatio = '16 / 9',
     sizes,
-    revealedByDefault = false,
 }) => {
     const [activeIndex, setActiveIndex] = useState<number>(0);
-    const [isTransitioning, setIsTransitioning] = useState(revealedByDefault);
+    const [isTransitioning, setIsTransitioning] = useState(false);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -34,19 +32,12 @@ const Carousel: React.FC<CarouselProps> = ({
         return () => clearTimeout(timer);
     }, []);
 
-    useEffect(() => {
-        if (images.length > 1) {
-            const nextIndex = (activeIndex + 1) % images.length;
-            const nextImage = new Image();
-            nextImage.src = images[nextIndex].src;
-        }
-    }, [activeIndex, images]);
-
     const handleImageClick = () => {
-        if (images.length > 1) {
+        if(images.length > 1) {
             setIsTransitioning(false);
             const nextIndex = (activeIndex + 1) % images.length;
             handleControlClick(nextIndex);
+
         }
     };
 
@@ -68,7 +59,6 @@ const Carousel: React.FC<CarouselProps> = ({
         <Flex fillWidth gap="12" direction="column">
             <Flex onClick={handleImageClick}>
                 <RevealFx
-                    revealedByDefault={revealedByDefault}
                     style={{ width: '100%' }}
                     trigger={isTransitioning}
                     translateY="16"
@@ -142,8 +132,7 @@ const Carousel: React.FC<CarouselProps> = ({
                                             cursor: 'pointer',
                                             borderRadius: 'var(--radius-m)',
                                             transition: 'background 0.3s ease',
-                                        }}
-                                    />
+                                        }}/>
                                 </Flex>
                             ))}
                         </Scroller>
@@ -153,6 +142,3 @@ const Carousel: React.FC<CarouselProps> = ({
         </Flex>
     );
 };
-
-Carousel.displayName = 'Carousel';
-export { Carousel };

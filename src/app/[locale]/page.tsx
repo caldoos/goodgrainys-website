@@ -1,10 +1,11 @@
 import React from 'react';
 
-import { Heading, Flex, Text, Button,  Avatar, RevealFx, Arrow } from '@/once-ui/components';
+import { Heading, Flex, Text, Button,  Avatar, RevealFx, Arrow, Grid, SmartImage } from '@/once-ui/components';
+import MasonryGrid from "@/components/gallery/MasonryGrid";
 import { Projects } from '@/components/work/Projects';
 
 import { baseURL, routes, renderContent } from '@/app/resources'; 
-import { Mailchimp } from '@/components';
+import { Connect } from '@/components/Connect';
 import { Posts } from '@/components/blog/Posts';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
@@ -47,7 +48,8 @@ export default function Home(
 ) {
 	unstable_setRequestLocale(locale);
 	const t = useTranslations();
-	const { home, about, person, newsletter } = renderContent(t);
+	const { home, about, person, connect, gallery } = renderContent(t) as any;
+
 	return (
 		<Flex
 			maxWidth="m" fillWidth gap="xl"
@@ -126,9 +128,22 @@ export default function Home(
 					</Flex>
 				
 			</Flex>
-			<RevealFx translateY="16" delay={0.6}>
-				<Projects range={[1,1]} locale={locale}/>
-			</RevealFx>
+			<Flex 
+				fillWidth 
+				direction="column" 
+				gap="24">
+				<RevealFx translateY="4">
+					<Heading
+						as="h2"
+						variant="display-strong-xs"
+						wrap="balance">
+						{gallery.title}
+					</Heading>
+				</RevealFx>
+				<Flex fillWidth>
+					<MasonryGrid />
+				</Flex>
+			</Flex>
 			{routes['/blog'] && (
 				<Flex
 					fillWidth gap="24"
@@ -141,16 +156,40 @@ export default function Home(
 							Latest from the blog
 						</Heading>
 					</Flex>
-					<Flex
-						flex={3} paddingX="20">
+					<Flex flex={3} paddingX="20">
 						<Posts range={[1,2]} columns="2" locale={locale}/>
 					</Flex>
 				</Flex>
 			)}
-			<Projects range={[2]} locale={locale}/>
-			{ newsletter.display &&
-				<Mailchimp newsletter={newsletter} />
-			}
+			{ connect.display && (
+				<Flex
+					fillWidth
+					direction="column"
+					gap="24">
+					<RevealFx translateY="4">
+						<Heading
+							as="h2"
+							variant="display-strong-xs"
+							wrap="balance">
+							{connect.title}
+						</Heading>
+						<Text
+							wrap="balance"
+							onBackground="neutral-weak"
+							variant="body-default-l">
+							{connect.description}
+						</Text>
+						<Text
+							wrap="balance"
+							onBackground="neutral-weak"
+							variant="body-default-m">
+						</Text>
+					</RevealFx>
+					<RevealFx translateY="8">
+						<Connect connect={connect} />
+					</RevealFx>
+				</Flex>
+			)}
 		</Flex>
 	);
 }
