@@ -1,4 +1,8 @@
 {
   "extends": "next/core-web-modules",
-  "root": true
+  "root": true,
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  }
 }
