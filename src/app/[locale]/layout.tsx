@@ -6,8 +6,7 @@ import classNames from 'classnames';
 import { Footer, Header, RouteGuard } from "@/components";
 import { baseURL, effects, style } from '@/app/resources'
 
-import { Inter } from 'next/font/google'
-import { Source_Code_Pro } from 'next/font/google';
+import { Inter, Source_Code_Pro } from 'next/font/google'
 
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, unstable_setRequestLocale } from 'next-intl/server';
