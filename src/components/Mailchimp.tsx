@@ -1,6 +1,5 @@
 "use client";
 
-import { mailchimp } from '@/app/resources'
 import { Button, Flex, Heading, Input, Text, Background } from '@/once-ui/components';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
@@ -67,10 +66,7 @@ export const Mailchimp = (
             background="surface" border="neutral-medium" borderStyle="solid-1">
             <Background
                 position="absolute"
-                mask={mailchimp.effects.mask as any}
-                gradient={mailchimp.effects.gradient as any}
-                dots={mailchimp.effects.dots as any}
-                lines={mailchimp.effects.lines as any}/>
+            />
             <Heading style={{position: 'relative'}}
                 marginBottom="s"
                 variant="display-strong-xs">
@@ -92,7 +88,7 @@ export const Mailchimp = (
                     display: 'flex',
                     justifyContent: 'center'
                 }}
-                action={mailchimp.action}
+                action="YOUR_MAILCHIMP_FORM_ACTION_URL"
                 method="post"
                 id="mc-embedded-subscribe-form"
                 name="mc-embedded-subscribe-form">
