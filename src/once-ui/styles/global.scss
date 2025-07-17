@@ -68,3 +68,42 @@ a {
 ::-webkit-scrollbar-corner {
     background-color: var(--static-transparent);
 }
+.mdx-album-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* or 3, 4, etc. */
+  gap: 8px;
+}
+
+.mdx-album-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 1 / 1; /* Default to square */
+}
+
+.mdx-album-grid img.horizontal {
+  grid-column: span 2; /* Make horizontal images span 2 columns */
+  aspect-ratio: 2 / 1; /* Wider aspect ratio for horizontal images */
+}
+
+.mdx-album-masonry {
+  display: flex;
+  margin-left: 0; /* Remove gutter offset if you want */
+  width: 100vw;   /* Make it as wide as the viewport */
+  max-width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+}
+.mdx-album-masonry-column {
+  padding-left: 8px; /* gutter size */
+  background-clip: padding-box;
+}
+.mdx-album-masonry img {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}

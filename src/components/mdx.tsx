@@ -7,6 +7,8 @@ import { HeadingLink } from '@/components';
 import { TextProps } from '@/once-ui/interfaces';
 import { SmartImageProps } from '@/once-ui/components/SmartImage';
 
+import GalleryGrid from './GalleryGrid';
+
 type TableProps = {
     data: {
         headers: string[];
@@ -72,7 +74,6 @@ function createImage({ alt, src, ...props }: SmartImageProps & { src: string }) 
             className="my-20"
             enlarge
             radius="m"
-            aspectRatio="16 / 9"
             alt={alt}
             src={src}
             {...props}/>
@@ -132,6 +133,7 @@ const components = {
     img: createImage as any,
     a: CustomLink as any,
     Table,
+    GalleryGrid,
 };
 
 type CustomMDXProps = MDXRemoteProps & {

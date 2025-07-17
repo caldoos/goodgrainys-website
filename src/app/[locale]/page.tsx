@@ -63,7 +63,7 @@ export default function Home(
                 position: 'relative'
             }}>
                 <iframe
-                    src='https://my.spline.design/parallaxinteractivewebsiteclassic-265e0c430c253c339b351c81f029c09a/'
+                    src='https://my.spline.design/animatedbackgroundgradientforweb-FB3a5z0n1jYUjINXAscRXFx3/'
                     style={{
                         width: '100%',
                         height: '100%',
