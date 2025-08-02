@@ -85,15 +85,15 @@ const about = {
             {
                 company: 'FLY',
                 timeframe: '2022 - Present',
-                role: 'Senior Design Engineer',
+                role: 'Creative Photographer',
                 achievements: [
-                    <>Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.</>,
-                    <>Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.</>
+                    <>Captured stunning moments and created memorable visual stories through photography.</>,
+                    <>Developed unique film photography techniques that enhanced the artistic quality of projects.</>
                 ],
                 images: [ // optional: leave the array empty if you don't want to display images
                     {
                         src: '/images/projects/project-01/cover-01.jpg',
-                        alt: 'Once UI Project',
+                        alt: 'Photography Project',
                         width: 16,
                         height: 9
                     }
@@ -102,10 +102,10 @@ const about = {
             {
                 company: 'Creativ3',
                 timeframe: '2018 - 2022',
-                role: 'Lead Designer',
+                role: 'Photography Assistant',
                 achievements: [
-                    <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
-                    <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
+                    <>Assisted in various photography projects and developed skills in different photography styles.</>,
+                    <>Contributed to creative projects and learned advanced photography techniques.</>
                 ],
                 images: [ ]
             }

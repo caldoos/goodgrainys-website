@@ -20,31 +20,28 @@
         "description": "Meet {name}, {role} from {location}",
         "intro": {
             "title": "Introduction",
-            "description": "Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology."
+            "description": "Calder Teo is a photographer based in Singapore. Started off as a digital photographer, he ventured into film photography and found a new interest in it. The film aesthetic – ambient tones and grainy textures, produces a unique and nostalgic feeling that inspired him to shoot film. He enjoys mixing different formats and exploring new styles on both analogue as well as digital. His work focusses on telling stories and seeks to capture beautiful memories."
         },
         "work": {
             "title": "Work Experience",
             "experiences": {
                 "FLY": {
                     "timeframe": "2022 - Present",
-                    "role": "Senior Design Engineer",
-                    "achievements": "Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.;Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster."
+                    "role": "Creative Photographer",
+                    "achievements": "Captured stunning moments and created memorable visual stories through photography.;Developed unique film photography techniques that enhanced the artistic quality of projects."
                 },
                 "Creativ3": {
                     "timeframe": "2018 - 2022",
-                    "role": "Lead Designer",
-                    "achievements": "Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.;Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue."
+                    "role": "Photography Assistant",
+                    "achievements": "Assisted in various photography projects and developed skills in different photography styles.;Contributed to creative projects and learned advanced photography techniques."
                 }
             }
         },
         "studies": {
             "title": "Studies",
             "institutions": {
-                "University of Jakarta": {
-                    "description": "Studied software engineering."
-                },
-                "Build the Future": {
-                    "description": "Studied online marketing and personal branding."
+                "Singapore Management University": {
+                    "description": "Bachelor of Science, Information Systems."
                 }
             }
         },
