@@ -1,6 +1,6 @@
 {
     "person": {
-        "role": "Design Engineer"
+        "role": "Creative Photographer"
     },
     "newsletter": {
         "title": "Subscribe to {firstName}'s Newsletter",
@@ -11,8 +11,8 @@
         "label": "Home",
         "title": "{name}'s Portfolio",
         "description": "Portfolio website showcasing my work as a {role}",
-        "headline": "Design engineer and builder",
-        "subline": "I'm Selene, a design engineer at FLY, where I craft intuitive user experiences. After hours, I build my own projects."
+        "headline": "Creative Photographer",
+        "subline": "I'm Calder, a creative photographer. I love to capture the beauty of the world and share it with others."
     },
     "about": {
         "label": "About",

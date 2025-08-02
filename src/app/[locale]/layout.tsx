@@ -27,12 +27,20 @@ export async function generateMetadata(
 		title: home.title,
 		description: home.description,
 		openGraph: {
-			title: `${person.firstName}'s Portfolio`,
-			description: 'Portfolio website showcasing my work.',
+			title: `${person.name}'s Portfolio`,
+			description: `Portfolio website showcasing my work as a ${person.role}`,
 			url: baseURL,
-			siteName: `${person.firstName}'s Portfolio`,
+			siteName: `${person.name}'s Portfolio`,
 			locale: 'en_US',
 			type: 'website',
+			images: [
+				{
+					url: person.avatar,
+					width: 1200,
+					height: 630,
+					alt: `${person.name} - ${person.role}`,
+				},
+			],
 		},
 		robots: {
 			index: true,
