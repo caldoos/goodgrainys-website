@@ -2,12 +2,12 @@ import { InlineCode } from "@/once-ui/components";
 
 const createI18nContent = (t) => {
     const person = {
-        firstName: 'Calder Teo',
+        firstName: 'Calder',
         lastName:  'Teo',
         get name() {
             return `${this.firstName} ${this.lastName}`;
         },
-        role:      t("person.role"),
+        role:      'Creative Photographer',
         avatar:    '/images/avatar.jpg',
         location:  'Singapore',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
         languages: ['English']  // optional: Leave the array empty if you don't want to display languages
