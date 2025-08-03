@@ -26,22 +26,6 @@ export async function generateMetadata(
 		metadataBase: new URL(`https://${baseURL}/${locale}`),
 		title: home.title,
 		description: home.description,
-		openGraph: {
-			title: `${person.name}'s Portfolio`,
-			description: `Portfolio website showcasing my work as a ${person.role}`,
-			url: baseURL,
-			siteName: `Calder Teo's Portfolio`,
-			locale: 'en_US',
-			type: 'website',
-			images: [
-				{
-					url: '/images/avatar.jpg',
-					width: 1200,
-					height: 630,
-					alt: `Calder Teo - Creative Photographer`,
-				},
-			],
-		},
 		robots: {
 			index: true,
 			follow: true,
