@@ -30,15 +30,15 @@ export async function generateMetadata(
 			title: `${person.name}'s Portfolio`,
 			description: `Portfolio website showcasing my work as a ${person.role}`,
 			url: baseURL,
-			siteName: `${person.name}'s Portfolio`,
+			siteName: `Calder Teo's Portfolio`,
 			locale: 'en_US',
 			type: 'website',
 			images: [
 				{
-					url: person.avatar,
+					url: '/images/avatar.jpg',
 					width: 1200,
 					height: 630,
-					alt: `${person.name} - ${person.role}`,
+					alt: `Calder Teo - Creative Photographer`,
 				},
 			],
 		},
